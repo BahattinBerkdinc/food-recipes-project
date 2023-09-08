@@ -1,0 +1,73 @@
+
+@use "../../style/mixins" as m;
+@use "../../style/variables" as v;
+
+.special-recipes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include m.for-desktop-only{
+        height: 70vh;
+    }
+
+
+    .img-box{
+        display: flex;
+        overflow: hidden;
+        height: 100%;
+        transition: all 500ms ease;
+        position: relative;
+        transition: all 500ms ease-in-out;
+        
+        
+
+        @include m.for-desktop-only{
+            &:hover{
+                min-width: 70%;
+                
+                >.img-content{
+                    display: flex;
+                }
+            }
+        }
+
+
+        img{
+            object-fit: cover;
+            width: 100%;
+            transition: min-width 0.3s ease;
+        }
+
+        .img-content{
+            background-color: rgba(88, 78, 56, 0.751);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4rem;
+            padding:0  5rem;
+            flex-direction: column;
+            position: absolute;
+            inset: 0;
+            display: none;
+
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.348) inset;
+
+            h1{
+                font-size: 4rem;
+                color: wheat;
+                font-weight: bolder;
+                text-transform: uppercase;
+            }
+
+            p{
+                color: white;
+                font-size: 2rem;
+                line-height: 30px;
+            }
+        }
+    }
+}

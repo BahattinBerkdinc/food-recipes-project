@@ -1,0 +1,38 @@
+@use "../../style/variables" as v;
+
+.form-search-recipes{
+        
+    .form-control{
+        border-radius: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: none;
+        border: v.$color-btn-bg 1px solid;
+
+        &:focus{
+            border-color: #bb7d3c;
+        }
+    }
+
+    .search-btn{
+        border-radius: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+
+        background-color: v.$color-btn-bg;
+
+        border: 0;
+        outline: 0;
+
+        &:active{
+            background-color: white;
+            color: black;
+        }
+    }
+
+    
+}

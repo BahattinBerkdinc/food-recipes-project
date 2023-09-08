@@ -1,0 +1,44 @@
+
+@use "../../style/variables" as v;
+@use "../../style/mixins" as m;
+
+
+.header{
+    display: flex;
+    padding: 1rem ;
+    >.container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include m.for-desktop-only{
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search{
+        flex: 1;
+    }
+    
+    .burger{
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        cursor: pointer;
+
+        @include m.for-desktop-only{
+            display: none;
+        }
+
+        svg{
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,3 +1,27 @@
 
-
+@import "./variables";
+@import "./mixins";
 @import "bootstrap/scss/bootstrap";
+
+
+
+body{
+
+    background-color: $color-bg;
+}
+
+.button-main{
+    background-color: $color-btn-bg;
+    color: white;
+    padding: .5rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    font-weight: 200;
+    letter-spacing: 1.3px;
+
+    &:hover{
+        background-color: $color-btn-bg-hover;
+    }
+}
+
