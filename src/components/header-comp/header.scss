@@ -6,7 +6,9 @@
 .header{
     display: flex;
     padding: 1rem ;
+    background-color: black;
     >.container{
+        
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -29,16 +31,17 @@
     
     .burger{
         position: absolute;
-        top: 1rem;
+        top: 2rem;
         left: 2rem;
         cursor: pointer;
+        color: v.$color-main;
 
         @include m.for-desktop-only{
             display: none;
         }
 
         svg{
-            font-size: 1.6rem;
+            font-size: 2rem;
         }
     }
 }

@@ -1,0 +1,58 @@
+@use "../../style/variables" as v;
+@use "../../style/mixins" as m;
+
+.banner{
+    background-image: url("../../assets/images/foods/mainbg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+   
+    position: relative;
+
+  
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   padding: 4rem;
+   
+
+   &::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.581);
+   }
+
+   h1{
+    color: rgba(255, 255, 255, 0.845);
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 99;
+
+    span{
+        color: rgb(196, 116, 35);
+        animation: animate 3s linear infinite;
+
+        @keyframes animate {
+            0%{
+                color: rgb(196, 116, 35);
+            }
+            50%{
+                color: white;
+            }
+            100%{
+                color: rgb(196, 116, 35);
+            }
+        }
+    }
+
+    @include m.for-desktop-only{
+        font-size: 7rem;
+    }
+    
+   }
+}

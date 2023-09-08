@@ -1,0 +1,43 @@
+@use "../../style/mixins" as m;
+
+.recipe-category-card{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid goldenrod;
+    border-radius: 40%;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+    @include m.for-desktop-only{
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        background-color: goldenrod;
+        padding: .3rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        font-size: 1rem;
+
+        @include m.for-desktop-only{
+            font-size: 2rem;
+            padding: 1rem;
+        }
+    }
+}

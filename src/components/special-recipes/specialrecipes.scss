@@ -23,17 +23,15 @@
         position: relative;
         transition: all 500ms ease-in-out;
         
-        
-
-        @include m.for-desktop-only{
-            &:hover{
-                min-width: 70%;
-                
-                >.img-content{
-                    display: flex;
-                }
+        &:hover{
+            min-width: 70%;
+            
+            >.img-content{
+                display: flex;
             }
         }
+
+        
 
 
         img{
@@ -47,8 +45,8 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            gap: 4rem;
-            padding:0  5rem;
+            gap: 2rem;
+            padding:0  2rem;
             flex-direction: column;
             position: absolute;
             inset: 0;
@@ -57,7 +55,7 @@
             box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.348) inset;
 
             h1{
-                font-size: 4rem;
+                font-size: 2rem;
                 color: wheat;
                 font-weight: bolder;
                 text-transform: uppercase;
@@ -65,8 +63,24 @@
 
             p{
                 color: white;
-                font-size: 2rem;
+                font-size: 1rem;
                 line-height: 30px;
+            }
+        }
+
+        @include m.for-desktop-only{
+            .img-content{
+              
+                gap: 4rem;
+                padding:0  5rem;
+    
+                h1{
+                    font-size: 4rem;
+                }
+    
+                p{
+                    font-size: 2rem;
+                }
             }
         }
     }
